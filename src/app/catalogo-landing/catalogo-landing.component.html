@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+LMp5njh5L5fK5Dn/zcx5l5vlDoeAe3r4I5F5Ef5m5f5tk5P5" crossorigin="anonymous">
+    <title>DigitalTechBooks</title>
+</head>
+
+<body>
+    <header>
+        <app-header-landing></app-header-landing>
+    </header>
+
+    <div class="secciones">
+        <section class="buscador-section">
+            <div class="centered-content">
+                <div class="buscador-container">
+                    <h4>Buscador</h4>
+                    <div class="input-container">
+                        <input type="text" placeholder="Ingresar titulo o categoria">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nuevas-colecciones" >
+            <h1>Explora Nuestra Colección</h1>
+            <div class="container">
+                <div class="carousel">
+                    <div class="carousel-wrapper">
+                        <div class="slides" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+                            <ng-container *ngFor="let image of displayedImages; let i = index">
+                          <div class="slide">
+                            <img [src]="image.src" [alt]="image.alt" />
+                            <div class="caption">{{ image.caption }}</div>
+                          </div>
+                        </ng-container>
+                        <div class="arrow left" (click)="previousImage()">&lt;</div>
+                        <!-- Flecha derecha (avanzar) -->
+                        <div class="arrow right" (click)="nextImage()">&gt;</div>
+                      </div>
+                    </div>
+                  </div>                  
+              </div>
+              
+        </section>
+
+        <section class="categorias-disponibles" >
+            <h1>Categorias disponibles</h1>
+            <div class="contenedor-recuadros">
+                <div class="recuadro-diagonal">
+                  <div class="texto">
+                    <h2>Ficción</h2>
+                  </div>
+                  <div class="imagen-fondo" style="background-image: url('../../assets/images/catalogo-landing/categorias/ficcion.png');"></div>
+                </div>
+                
+                <div class="recuadro-diagonal">
+                  <div class="texto">
+                    <h2>Poesía</h2>
+                  </div>
+                  <div class="imagen-fondo" style="background-image: url('../../assets/images/catalogo-landing/categorias/poesia.png');"></div>
+                </div>
+                
+                <div class="recuadro-diagonal">
+                  <div class="texto">
+                    <h2>Teatro</h2>
+                  </div>
+                  <div class="imagen-fondo" style="background-image: url('../../assets/images/catalogo-landing/categorias/teatro.png');"></div>
+                </div>
+          
+                <div class="recuadro-diagonal">
+                  <div class="texto">
+                    <h2>Ciencia</h2>
+                  </div>
+                  <div class="imagen-fondo" style="background-image: url('../../assets/images/catalogo-landing/categorias/ciencia.png');"></div>
+                </div>
+                
+                <div class="recuadro-diagonal">
+                  <div class="texto">
+                    <h2>Historia</h2>
+                  </div>
+                  <div class="imagen-fondo" style="background-image: url('../../assets/images/catalogo-landing/categorias/historia.png');"></div>
+                </div>
+                <div class="recuadro-diagonal">
+                  <div class="texto">
+                    <h2>Suspenso</h2>
+                  </div>
+                  <div class="imagen-fondo" style="background-image: url('../../assets/images/catalogo-landing/categorias/misterio.png');"></div>
+                </div>
+              </div>
+        </section>
+    </div>
+
+    <footer>
+        <app-footer-landing></app-footer-landing>
+    </footer>
+</body>
+
+</html>
