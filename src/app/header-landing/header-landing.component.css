@@ -17,14 +17,14 @@ body {
 
 header {
   position: fixed;
-  top: 0;
+  top: -10px;
   left: 0;
   z-index: 5;
   width: 100%;
   display: flex;
   justify-content: center;
   background: #ffffff;
-  height: 70px;
+  height: 80px;
 }
 
 .navbar {
