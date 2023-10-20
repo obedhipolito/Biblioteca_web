@@ -9,6 +9,7 @@ import { FooterLandingComponent } from './footer-landing/footer-landing.componen
 import { CatalogoLandingComponent } from './catalogo-landing/catalogo-landing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServiciosLandingComponent } from './servicios-landing/servicios-landing.component';
+import { AcercaLandingComponent } from './acerca-landing/acerca-landing.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServiciosLandingComponent } from './servicios-landing/servicios-landing
     FooterLandingComponent,
     CatalogoLandingComponent,
     ServiciosLandingComponent,
+    AcercaLandingComponent,
   ],
   imports: [
     BrowserModule,
